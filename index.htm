@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  <style>
+    html,body {position: relative;height: 100%;}
+    swiper-container {width: 100%;height: 100%;}
+    swiper-slide {
+      text-align: center;
+      font-size: 15px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .autoplay-progress {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      z-index: 10;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: var(--swiper-theme-color);
+    }
+    .autoplay-progress svg {
+      --progress: 0;
+      position: absolute;
+      left: 0;
+      top: 0px;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      stroke-width: 4px;
+      stroke: var(--swiper-theme-color);
+      fill: none;
+      stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+      stroke-dasharray: 125.6;
+      transform: rotate(-90deg);
+    }
+    .sviperbg1{background: url(img/pic1.jpg) center/cover;opacity: 100;}
+    .sviperbg2{background: url(img/pic2.jpg) center/cover;opacity: 100;}
+    .sviperbg3{background: url(img/pic3.jpg) center/cover;opacity: 100;}
+    .sviperbg4{background: url(img/pic4.jpg) center/cover;opacity: 100;}
+    #footer{
+      background-image: url("img/footer.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+  </style>
+</head>
+<body>
+    <header class="bg-[rgb(34,179,193)] sticky top-0 z-50 flex justify-between px-10  py-7 lg:px-40 lg:py-4 items-center">
+        <img class="cursor-pointer" src="img/logo.png" alt="">
+      <nav>
+        <p class="lg:hidden text-2xl text-white"><i class="fa-solid fa-bars"></i></p>
+        <ul class="flex gap-15 text-white hidden lg:flex">
+          <li><a href="#" class="hover:text-[rgb(206,238,241)] transition duration-300">Home</a></li>
+          <li><a href="#" class="hover:text-[rgb(206,238,241)] transition duration-300">About</a></li>
+          <li><a href="#" class="hover:text-[rgb(206,238,241)] transition duration-300">Deals</a></li>
+          <li><a href="#" class="hover:text-[rgb(206,238,241)] transition duration-300">Reservation</a></li>
+          <li><a href="#" class="hover:text-[rgb(206,238,241)] transition duration-300">Book Yours</a></li>
+        </ul>
+      </nav>
+    </header>
+     <swiper-container class="mySwiper bg-[rgb(35,34,35)]" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
+    centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+    <swiper-slide class="h-[665px] sviperbg1">
+      <div class="flex flex-col">
+     <div class="flex flex-col ">
+       <p class="text-3xl text-white font-bold block pb-5">Take a Glimpse Into The Beautiful Country Of:</p>
+      <h1 class="text-5xl text-white font-extrabold">Caribbean</h1>
+       <div class="mt-7 py-5"> <a class="text-[#22b3c1]  text-2xl border border- border-[#22b3c1] rounded-4xl px-5 py-1 hover:bg-[rgb(34,179,193)] hover:text-white transition duration-300" href="">Go There</a></div>
+     </div>
+     <div class="bg-white flex flex-col md:flex-row lg:flex-row items-center justify-center mt-8 px-10 rounded-[60px] mx-7 lg:py-8 lg:px-[90px] md:gap-4 lg:gap-8">
+      <div class="flex mt-7 md:mt-0 lg:mt-0">
+        <div class="border border-[#22b3c1] border-2 rounded-[50%] mr-3 flex justify-center items-center w-[60px]"><i class="fa-solid fa-user text-[#22b3c1] text-4xl  "></i></div>
+        <div>
+          <p>Population:</p>
+          <p class="text-2xl text-[#22b3c1] font-bold">44.48 M</p>
+        </div>
+      </div>
+
+       <div class="flex mt-5 md:mt-0 lg:mt-0">
+        <div class="border border-[#22b3c1] border-2 rounded-[50%] mr-3 flex justify-center items-center w-[60px]"><i class="fa-solid fa-globe text-[#22b3c1] text-4xl "></i></div>
+        <div>
+          <p>Territory:</p>
+          <p class="text-2xl text-[#22b3c1] font-bold">275.400 KM2</p>
+        </div>
+      </div>
+
+      <div class="flex mt-5 md:mt-0 lg:mt-0">
+        <div class="border border-[#22b3c1] border-2 rounded-[50%] mr-3 flex justify-center items-center w-[60px]"><i class="fa-solid fa-house text-[#22b3c1] text-4xl "></i></div>
+        <div>
+          <p>AVG Price:</p>
+          <p class="text-2xl text-[#22b3c1] font-bold">$946.000</p>
+        </div>
+      </div>
+      <div class="bg-[#22b3c1] mt-2.5  lg:ml-4 flex justify-center items-center h-[40px] rounded-3xl mt-5 mb-7 md:mt-0 lg:mt-0 md:mb-0 lg:mb-0 "><a class="text-white font-bold px-4" href="">Explore More</a></div>
+     </div>
+   </div>
+    </swiper-slide>
+    <swiper-slide  class="h-[665px] sviperbg2">
+      <div class="flex flex-col">
+     <div class="flex flex-col ">
+       <p class="text-3xl text-white font-bold block pb-5">Take a Glimpse Into The Beautiful Country Of:</p>
+      <h1 class="text-5xl text-white font-extrabold">Switzerland</h1>
+       <div class="mt-7 py-5"> <a class="text-[#22b3c1]  text-2xl border border- border-[#22b3c1] rounded-4xl px-5 py-1  hover:bg-[rgb(34,179,193)] hover:text-white transition duration-300" href="">Go There</a></div>
+     </div>
+     <div class="bg-white flex flex-col md:flex-row lg:flex-row items-center justify-center mt-8 px-10 rounded-[60px] mx-7 lg:py-8 lg:px-[90px] md:gap-4 lg:gap-8">
+      <div class="flex mt-7 md:mt-0 lg:mt-0">
+        <div class="border border-[#22b3c1] border-2 rounded-[50%] mr-3 flex justify-center items-center w-[60px]"><i class="fa-solid fa-user text-[#22b3c1] text-4xl  "></i></div>
+        <div>
+          <p>Population:</p>
+          <p class="text-2xl text-[#22b3c1] font-bold">8.66 M</p>
+        </div>
+      </div>
+
+       <div class="flex mt-5 md:mt-0 lg:mt-0">
+        <div class="border border-[#22b3c1] border-2 rounded-[50%] mr-3 flex justify-center items-center w-[60px]"><i class="fa-solid fa-globe text-[#22b3c1] text-4xl "></i></div>
+        <div>
+          <p>Territory:</p>
+          <p class="text-2xl text-[#22b3c1] font-bold">41.290 KM2</p>
+        </div>
+      </div>
+
+      <div class="flex mt-5 md:mt-0 lg:mt-0">
+        <div class="border border-[#22b3c1] border-2 rounded-[50%] mr-3 flex justify-center items-center w-[60px]"><i class="fa-solid fa-house text-[#22b3c1] text-4xl "></i></div>
+        <div>
+          <p>AVG Price:</p>
+          <p class="text-2xl text-[#22b3c1] font-bold">$1.100.200</p>
+        </div>
+      </div>
+      <div class="bg-[#22b3c1] mt-2.5  lg:ml-4 flex justify-center items-center h-[40px] rounded-3xl mt-5 mb-7 md:mt-0 lg:mt-0 md:mb-0 lg:mb-0 "><a class="text-white font-bold px-4" href="">Explore More</a></div>
+     </div>
+   </div>
+    </swiper-slide>
+    <swiper-slide  class="h-[665px] sviperbg3">
+      <div class="flex flex-col">
+     <div class="flex flex-col ">
+       <p class="text-3xl text-white font-bold block pb-5">Take a Glimpse Into The Beautiful Country Of:</p>
+      <h1 class="text-5xl text-white font-extrabold">France</h1>
+       <div class="mt-7 py-5"> <a class="text-[#22b3c1]  text-2xl border border- border-[#22b3c1] rounded-4xl px-5 py-1  hover:bg-[rgb(34,179,193)] hover:text-white transition duration-300" href="">Go There</a></div>
+     </div>
+     <div class="bg-white flex flex-col md:flex-row lg:flex-row items-center justify-center mt-8 px-10 rounded-[60px] mx-7 lg:py-8 lg:px-[90px] md:gap-4 lg:gap-8">
+      <div class="flex mt-7 md:mt-0 lg:mt-0">
+        <div class="border border-[#22b3c1] border-2 rounded-[50%] mr-3 flex justify-center items-center w-[60px]"><i class="fa-solid fa-user text-[#22b3c1] text-4xl  "></i></div>
+        <div>
+          <p>Population:</p>
+          <p class="text-2xl text-[#22b3c1] font-bold">67.41 M</p>
+        </div>
+      </div>
+
+       <div class="flex mt-5 md:mt-0 lg:mt-0">
+        <div class="border border-[#22b3c1] border-2 rounded-[50%] mr-3 flex justify-center items-center w-[60px]"><i class="fa-solid fa-globe text-[#22b3c1] text-4xl "></i></div>
+        <div>
+          <p>Territory:</p>
+          <p class="text-2xl text-[#22b3c1] font-bold">551.500 KM2</p>
+        </div>
+      </div>
+
+      <div class="flex mt-5 md:mt-0 lg:mt-0">
+        <div class="border border-[#22b3c1] border-2 rounded-[50%] mr-3 flex justify-center items-center w-[60px]"><i class="fa-solid fa-house text-[#22b3c1] text-4xl "></i></div>
+        <div>
+          <p>AVG Price:</p>
+          <p class="text-2xl text-[#22b3c1] font-bold">$425.600</p>
+        </div>
+      </div>
+      <div class="bg-[#22b3c1] mt-2.5  lg:ml-4 flex justify-center items-center h-[40px] rounded-3xl mt-5 mb-7 md:mt-0 lg:mt-0 md:mb-0 lg:mb-0 "><a class="text-white font-bold px-4" href="">Explore More</a></div>
+     </div>
+   </div>
+    </swiper-slide>
+    <swiper-slide  class="h-[665px] sviperbg4">
+      <div class="flex flex-col">
+     <div class="flex flex-col ">
+       <p class="text-3xl text-white font-bold block pb-5">Take a Glimpse Into The Beautiful Country Of:</p>
+      <h1 class="text-5xl text-white font-extrabold">Thailand</h1>
+       <div class="mt-7 py-5"> <a class="text-[#22b3c1]  text-2xl border border- border-[#22b3c1] rounded-4xl px-5 py-1  hover:bg-[rgb(34,179,193)] hover:text-white transition duration-300" href="">Go There</a></div>
+     </div>
+     <div class="bg-white flex flex-col md:flex-row lg:flex-row items-center justify-center mt-8 px-10 rounded-[60px] mx-7 lg:py-8 lg:px-[90px] md:gap-4 lg:gap-8">
+      <div class="flex mt-7 md:mt-0 lg:mt-0">
+        <div class="border border-[#22b3c1] border-2 rounded-[50%] mr-3 flex justify-center items-center w-[60px]"><i class="fa-solid fa-user text-[#22b3c1] text-4xl  "></i></div>
+        <div>
+          <p>Population:</p>
+          <p class="text-2xl text-[#22b3c1] font-bold">69.86 M</p>
+        </div>
+      </div>
+
+       <div class="flex mt-5 md:mt-0 lg:mt-0">
+        <div class="border border-[#22b3c1] border-2 rounded-[50%] mr-3 flex justify-center items-center w-[60px]"><i class="fa-solid fa-globe text-[#22b3c1] text-4xl "></i></div>
+        <div>
+          <p>Territory:</p>
+          <p class="text-2xl text-[#22b3c1] font-bold">513.120 KM2</p>
+        </div>
+      </div>
+
+      <div class="flex mt-5 md:mt-0 lg:mt-0">
+        <div class="border border-[#22b3c1] border-2 rounded-[50%] mr-3 flex justify-center items-center w-[60px]"><i class="fa-solid fa-house text-[#22b3c1] text-4xl "></i></div>
+        <div>
+          <p>AVG Price:</p>
+          <p class="text-2xl text-[#22b3c1] font-bold">$165.450</p>
+        </div>
+      </div>
+      <div class="bg-[#22b3c1] mt-2.5  lg:ml-4 flex justify-center items-center h-[40px] rounded-3xl mt-5 mb-7 md:mt-0 lg:mt-0 md:mb-0 lg:mb-0 "><a class="text-white font-bold px-4" href="">Explore More</a></div>
+     </div>
+   </div>
+    </swiper-slide>
+    </swiper-slide>
+    <div class="autoplay-progress" slot="container-end">
+      <svg viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+      <span></span>
+    </div>
+  </swiper-container>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>
+  <script>
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+
+    const swiperEl = document.querySelector("swiper-container");
+    swiperEl.addEventListener("autoplaytimeleft", (e) => {
+      const [swiper, time, progress] = e.detail;
+      progressCircle.style.setProperty("--progress", 1 - progress);
+      progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+    });
+  </script>
+
+
+  <section class="bg-[rgb(35,34,35)]  lg:0 lg:px-25">
+      <div class="text-center lg:0 lg:px-25">
+          <h1 class="text-white font-bold text-3xl pt-10 pb-5">Visit One Of Our Countries Now</h1>
+          <p class="max-w-full text-[rgb(175,175,175)] pb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+      </div>
+
+
+      <div class="px-2 lg:px-0 lg:px-25 lg:flex lg:w-300 lg:mx-auto">
+          <div>
+              <img src="img/tablepic1.jpg" alt="table1" class="rounded-[20px] pb-3 w-full lg:h-80 lg:w-120">
+          </div>
+          <div class="lg:pl-10">
+          <div class="flex justify-between">
+              <h1 class="text-white text-xl font-bold">SWITZERLAND</h1>
+              <a href=""><button class="bg-[rgb(34,179,193)] rounded-3xl py-3 px-6 text-white font-medium cursor-pointer hover:bg-blue-400 transition duration-300">Explore More</button></a>
+          </div>
+          <div>
+              <p class="text-[rgb(175,175,175)]">Europe</p>
+              <p class="text-[rgb(175,175,175)] py-5">Woox Travel is a professional Bootstrap 5 theme HTML CSS layout for your website. You can use this layout for your commercial work.</p>
+              <hr class="w-[100%] mx-auto border-white">
+          </div>
+          <div class="py-5 flex justify-between text-[18px] text-[rgb(175,175,175)]">
+              <div>
+                  <p><i class="fa-solid fa-user"></i> 8.66 Mil People</p>
+              </div>
+              <div>
+                  <p><i class="fa-solid fa-globe"></i> 41.290 km2</p>
+              </div>
+              <div>
+                  <p><i class="fa-solid fa-house"></i> $1.100.200</p>
+              </div>
+          </div>
+              <hr class="w-[100%] mx-auto border-white">
+              <p class="text-[15px] py-5 text-[rgb(34,179,193)] cursor-pointer">Need Directions?<span>→</span></p>
+              <hr class="w-[100%] mx-auto border-white lg:hidden pb-10 lg:pb-0">
+          </div>
+          </div>
+          <hr class="w-[100%] mx-auto border-none pt-10">
+          <div class="px-2 lg:px-0 lg:px-25 lg:flex lg:w-300 lg:mx-auto">
+          <div>
+              <img src="img/tablepic2.jpg" alt="table1" class="rounded-[20px] pb-3 w-full lg:h-80 lg:w-120">
+          </div>
+          <div class="lg:pl-10">
+          <div class="flex justify-between">
+              <h1 class="text-white text-xl font-bold">CARIBBEAN</h1>
+              <a href=""><button class="bg-[rgb(34,179,193)] rounded-3xl py-3 px-6 text-white font-medium cursor-pointer hover:bg-blue-400 transition duration-300">Explore More</button></a>
+          </div>
+          <div>
+              <p class="text-[rgb(175,175,175)]">North America</p>
+              <p class="text-[rgb(175,175,175)] py-5">Woox Travel is a professional Bootstrap 5 theme HTML CSS layout for your website. You can use this layout for your commercial work.</p>
+              <hr class="w-[100%] mx-auto border-white">
+          </div>
+          <div class="py-5 flex justify-between text-[18px] text-[rgb(175,175,175)]">
+              <div>
+                  <p><i class="fa-solid fa-user"></i> 44.48 Mil People</p>
+              </div>
+              <div>
+                  <p><i class="fa-solid fa-globe"></i> 275.400 km2</p>
+              </div>
+              <div>
+                  <p><i class="fa-solid fa-house"></i> $946.000</p>
+              </div>
+          </div>
+              <hr class="w-[100%] mx-auto border-white">
+              <p class="text-[15px] py-5 text-[rgb(34,179,193)] cursor-pointer">Need Directions?<span>→</span></p>
+              <hr class="w-[100%] mx-auto border-white lg:hidden pb-10 lg:pb-0">
+          </div>
+          </div>
+          <hr class="w-[100%] mx-auto border-none pt-10">
+                <div class="px-2 lg:px-0 lg:px-25 lg:flex lg:w-300 lg:mx-auto">
+          <div>
+              <img src="img/tablepic3.jpg" alt="table1" class="rounded-[20px] pb-3 w-full lg:h-80 lg:w-120">
+          </div>
+          <div class="lg:pl-10">
+          <div class="flex justify-between">
+              <h1 class="text-white text-xl font-bold">FRANCE</h1>
+              <a href=""><button class="bg-[rgb(34,179,193)] rounded-3xl py-3 px-6 text-white font-medium cursor-pointer hover:bg-blue-400 transition duration-300r">Explore More</button></a>
+          </div>
+          <div>
+              <p class="text-[rgb(175,175,175)]">Europe</p>
+              <p class="text-[rgb(175,175,175)] py-5">Woox Travel is a professional Bootstrap 5 theme HTML CSS layout for your website. You can use this layout for your commercial work.</p>
+              <hr class="w-[100%] mx-auto border-white">
+          </div>
+          <div class="py-5 flex justify-between text-[18px] text-[rgb(175,175,175)]">
+              <div>
+                  <p><i class="fa-solid fa-user"></i> 67.41 Mil People</p>
+              </div>
+              <div>
+                  <p><i class="fa-solid fa-globe"></i> 551.500 km2</p>
+              </div>
+              <div>
+                  <p><i class="fa-solid fa-house"></i> $425.600</p>
+              </div>
+          </div>
+              <hr class="w-[100%] mx-auto border-white">
+              <p class="text-[15px] py-5 text-[rgb(34,179,193)] cursor-pointer">Need Directions?<span>→</span></p>
+          </div>
+          </div>
+          <div class="flex gap-3 justify-center pt-5">
+              <div>
+                  <button class="w-12 h-12 flex items-center justify-center rounded-full border border-none text-[rgb(34,179,193)] hover:bg-[rgb(34,179,193)] hover:text-white transition duration-400 cursor-pointer"><i class="fa-solid fa-arrow-left"></i></button>
+              </div>
+              <div>
+                  <button  class="w-12 h-12 flex items-center justify-center rounded-full border border-[rgb(34,179,193)] text-[rgb(34,179,193)] hover:bg-[rgb(34,179,193)] hover:text-white transition duration-400 cursor-pointer">1</button>
+              </div>
+              <div>
+                  <button class="w-12 h-12 flex items-center justify-center rounded-full border border-[rgb(34,179,193)] text-white hover:bg-[rgb(34,179,193)] hover:text-white transition duration-400 cursor-pointer bg-[rgb(34,179,193)]">2</button>
+              </div>
+              <div>
+                  <button class="w-12 h-12 flex items-center justify-center rounded-full border border-[rgb(34,179,193)] text-[rgb(34,179,193)] hover:bg-[rgb(34,179,193)] hover:text-white transition duration-400 cursor-pointer">3</button>
+              </div>
+              <div class="pb-20">
+                  <button class="w-12 h-12 flex items-center justify-center rounded-full border border-none text-[rgb(34,179,193)] hover:bg-[rgb(34,179,193)] hover:text-white transition duration-400 cursor-pointer"><i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+          </div>
+  </section>
+  <footer id="footer" class="h-[350px] lg:h-[60%]">
+      <div class="pt-5 md:pt-0 text-center md:text-left p-0 lg:p-40 lg:flex lg:justify-between">
+      <div>
+        <h1 class="text-4xl text-white font-bold uppercase">Are You Looking To Travel ?</h1>
+        <p class="text-[20px] text-white font-medium py-5 md:py-0">Make A Reservation By Clicking The Button</p>
+      </div>
+      <div>
+          <a href=""><button class="px-12 py-4 rounded-full border border-white text-white font-semibold transition-all duration-300 hover:bg-white hover:text-[rgb(94,206,226)] font-medium cursor-pointer">Book Yours Now</button></a>
+      </div>
+      </div>
+      <div class="text-white text-[18px] text-center pt-25 lg:pt-0">
+          <p>Copyright © 2036  Company. All rights reserved.</p>
+          <p>Designed by Rafael Gurbanov</p>
+      </div>
+    </footer>
+</body>
+</html>
